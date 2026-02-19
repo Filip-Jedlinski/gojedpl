@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 255 255 255;
+    --surface: 245 247 248;
+    --surface-soft: 235 238 242;
+    --text: 15 23 42;
+    --muted: 100 116 139;
+    --line: 226 232 240;
+    --primary: 46 230 143;
+    --primary-strong: 29 177 109;
+  }
+
+  body {
+    @apply bg-light text-dark font-sans scroll-smooth;
+    background: linear-gradient(
+      135deg,
+      rgb(255 255 255 / 1) 0%,
+      rgb(245 247 248 / 1) 100%
+    );
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-bold text-dark;
+  }
+
+  h1 {
+    @apply text-3xl md:text-5xl lg:text-6xl leading-tight;
+  }
+
+  h2 {
+    @apply text-2xl md:text-4xl leading-tight;
+  }
+
+  h3 {
+    @apply text-xl leading-relaxed;
+  }
+}
+
+@layer components {
+  .container {
+    @apply w-full max-w-7xl mx-auto px-5 sm:px-6 lg:px-8;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center px-5 py-3 rounded-xl font-bold transition-all duration-200;
+    @apply bg-gradient-to-b from-[#32f8a0] to-[#1db16d] text-dark hover:shadow-lg hover:-translate-y-0.5;
+    box-shadow: 0 10px 20px rgba(46, 230, 143, 0.22);
+  }
+
+  .btn-small {
+    @apply px-4 py-2 text-sm;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent border border-dark/20 text-dark shadow-none hover:bg-surface;
+  }
+
+  .eyebrow {
+    @apply inline-block border border-[#c1fada] text-[#059669] rounded-full font-semibold text-sm px-3 py-1.5 mb-4;
+  }
+
+  .section {
+    @apply py-14 md:py-24;
+  }
+
+  .section-soft {
+    @apply bg-surface/40 border-t border-b border-line;
+  }
+}
