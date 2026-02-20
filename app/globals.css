@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,7 +8,7 @@
     --surface: 245 247 248;
     --surface-soft: 235 238 242;
     --text: 15 23 42;
-    --muted: 100 116 139;
+    --muted: 71 85 105;
     --line: 226 232 240;
     --primary: 46 230 143;
     --primary-strong: 29 177 109;

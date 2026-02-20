@@ -40,27 +40,27 @@ export default function Hero() {
             </h2>
             <div className="space-y-4">
               <div className="bg-surface-soft border border-line rounded-lg p-3">
-                <strong className="block text-primary">
+                <strong className="block text-primary-strong">
                   Błyskawiczna Realizacja.
                 </strong>
-                <span className="text-xs text-muted">
+                <span className="text-xs text-dark/80">
                   Stawiamy na szybkie i efektywne realizacje.
                 </span>
               </div>
               <div className="bg-surface-soft border border-line rounded-lg p-3">
-                <strong className="block text-primary">
+                <strong className="block text-primary-strong">
                   Niskie ceny usług
                 </strong>
-                <span className="text-xs text-muted">
+                <span className="text-xs text-dark/80">
                   Oferujemy konkurencyjne ceny dostosowane do potrzeb lokalnych
                   firm.
                 </span>
               </div>
               <div className="bg-surface-soft border border-line rounded-lg p-3">
-                <strong className="block text-primary">
+                <strong className="block text-primary-strong">
                   Obsługa lokalnych firm
                 </strong>
-                <span className="text-xs text-muted">
+                <span className="text-xs text-dark/80">
                   Skupiamy się na potrzebach lokalnych przedsiębiorstw, oferując
                   spersonalizowane rozwiązania.
                 </span>

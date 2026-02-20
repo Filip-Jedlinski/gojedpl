@@ -47,10 +47,10 @@ export default function Footer() {
             >
               Polityka prywatności
             </Link>
-            <p className="text-muted text-xs mt-3">
+            <p className="text-dark/70 text-xs mt-3">
               Zespół: Filip Jedliński, Arkadiusz Goździcki
             </p>
-            <p className="text-muted text-xs mt-1">© {year} Gojed</p>
+            <p className="text-dark/70 text-xs mt-1">© {year} Gojed</p>
           </div>
         </div>
       </div>
