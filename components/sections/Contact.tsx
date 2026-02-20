@@ -54,6 +54,10 @@ export default function Contact({
   const layoutClass = fullWidth
     ? "grid lg:grid-cols-[1fr_1.3fr] gap-8 lg:gap-12 items-start"
     : "grid lg:grid-cols-2 gap-12";
+  const fieldOutlineClass =
+    "rounded-xl border-2 border-primary/30 bg-white p-1 transition-colors focus-within:border-primary/60";
+  const fieldClass =
+    "w-full bg-surface-soft border-0 rounded-md px-3 py-2.5 text-dark focus:outline-none";
 
   return (
     <section className={sectionClass} id="kontakt">
@@ -61,7 +65,7 @@ export default function Contact({
         <div className={wrapperClass}>
           <div className={layoutClass}>
             <div className="order-2 lg:order-1 space-y-6 text-center lg:text-left">
-              <div>
+              <div className="hidden lg:block">
                 <p className="eyebrow">Kontakt</p>
                 <h1
                   className={fullWidth ? "text-4xl md:text-5xl mb-4" : "mb-4"}
@@ -115,160 +119,190 @@ export default function Contact({
               )}
             </div>
 
-            <form
-              onSubmit={handleSubmit}
-              className={`order-1 lg:order-2 bg-white border border-line rounded-2xl p-6 md:p-8 ${fullWidth ? "w-full" : "max-w-2xl mx-auto w-full"}`}
-            >
-              <input
-                type="text"
-                name="_gotcha"
-                className="hidden"
-                tabIndex={-1}
-                autoComplete="off"
-              />
-              <input
-                type="hidden"
-                name="_subject"
-                value="Nowe zapytanie z formularza gojed.pl"
-              />
-
-              <div className="mb-6">
-                <h2 className="text-2xl md:text-3xl mb-2">
-                  Formularz kontaktowy
-                </h2>
-                <p className="text-muted text-sm">
-                  Wypełnij pola poniżej - wrócimy z odpowiedzią możliwie szybko.
+            <div className="order-1 lg:order-2 space-y-6">
+              <div className="text-center lg:hidden">
+                <p className="eyebrow">Kontakt</p>
+                <h1
+                  className={fullWidth ? "text-4xl md:text-5xl mb-4" : "mb-4"}
+                >
+                  Porozmawiajmy o Twojej stronie
+                </h1>
+                <p className="text-dark text-lg max-w-xl mx-auto lg:mx-0">
+                  Napisz, czego potrzebujesz, a zaproponujemy najlepszy pakiet i
+                  konkretne kolejne kroki.
                 </p>
               </div>
 
-              <div className="grid sm:grid-cols-2 gap-4 mb-4">
-                <label className="block">
-                  <span className="text-sm font-semibold mb-1 block">
-                    Imię i nazwisko
-                  </span>
-                  <input
-                    type="text"
-                    name="name"
-                    required
-                    maxLength={120}
-                    autoComplete="name"
-                    className="w-full bg-surface-soft border border-line rounded-lg px-4 py-3 text-dark focus:outline-none focus:border-primary/50"
-                  />
-                </label>
-
-                <label className="block">
-                  <span className="text-sm font-semibold mb-1 block">
-                    Firma
-                  </span>
-                  <input
-                    type="text"
-                    name="company"
-                    maxLength={150}
-                    autoComplete="organization"
-                    className="w-full bg-surface-soft border border-line rounded-lg px-4 py-3 text-dark focus:outline-none focus:border-primary/50"
-                  />
-                </label>
-              </div>
-
-              <div className="grid sm:grid-cols-2 gap-4 mb-4">
-                <label className="block">
-                  <span className="text-sm font-semibold mb-1 block">
-                    E-mail
-                  </span>
-                  <input
-                    type="email"
-                    name="email"
-                    required
-                    maxLength={150}
-                    autoComplete="email"
-                    className="w-full bg-surface-soft border border-line rounded-lg px-4 py-3 text-dark focus:outline-none focus:border-primary/50"
-                  />
-                </label>
-
-                <label className="block">
-                  <span className="text-sm font-semibold mb-1 block">
-                    Telefon
-                  </span>
-                  <input
-                    type="tel"
-                    name="phone"
-                    required
-                    maxLength={30}
-                    autoComplete="tel"
-                    className="w-full bg-surface-soft border border-line rounded-lg px-4 py-3 text-dark focus:outline-none focus:border-primary/50"
-                  />
-                </label>
-              </div>
-
-              <label className="block mb-4">
-                <span className="text-sm font-semibold mb-1 block">
-                  Wybierz pakiet
-                </span>
-                <select
-                  name="package"
-                  defaultValue={preselectedPackage ?? ""}
-                  required
-                  className="w-full bg-surface-soft border border-line rounded-lg px-4 py-3 text-dark focus:outline-none focus:border-primary/50"
-                >
-                  <option value="" disabled>
-                    Wybierz pakiet
-                  </option>
-                  <option value="Pakiet START">Pakiet START</option>
-                  <option value="Pakiet BIZNES">Pakiet BIZNES</option>
-                </select>
-              </label>
-
-              <label className="block mb-4">
-                <span className="text-sm font-semibold mb-1 block">
-                  Opis projektu
-                </span>
-                <textarea
-                  name="message"
-                  rows={6}
-                  required
-                  maxLength={3000}
-                  className="w-full bg-surface-soft border border-line rounded-lg px-4 py-3 text-dark focus:outline-none focus:border-primary/50"
-                />
-              </label>
-
-              <label className="flex items-start gap-2 text-sm text-dark mb-6">
-                <input
-                  type="checkbox"
-                  name="consent"
-                  required
-                  className="mt-1"
-                />
-                <span>
-                  Wyrażam zgodę na kontakt w sprawie zapytania. Zapoznałem/am
-                  się z{" "}
-                  <Link
-                    href="/polityka-prywatnosci"
-                    className="text-primary hover:text-primary-strong"
-                  >
-                    Polityką prywatności
-                  </Link>
-                  .
-                </span>
-              </label>
-
-              <button
-                type="submit"
-                disabled={loading}
-                className="btn w-full disabled:opacity-50 disabled:cursor-not-allowed"
+              <form
+                onSubmit={handleSubmit}
+                className={`bg-white border border-line rounded-2xl p-6 md:p-8 ${fullWidth ? "w-full" : "max-w-2xl mx-auto w-full"}`}
               >
-                {loading ? "Wysyłanie..." : "Wyślij zapytanie"}
-              </button>
+                <input
+                  type="text"
+                  name="_gotcha"
+                  className="hidden"
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="Nowe zapytanie z formularza gojed.pl"
+                />
 
-              {status && (
-                <p
-                  className={`mt-3 text-sm text-center ${
-                    status.startsWith("✓") ? "text-primary" : "text-orange-400"
-                  }`}
+                <div className="mb-6">
+                  <h2 className="text-2xl md:text-3xl mb-2">
+                    Formularz kontaktowy
+                  </h2>
+                  <p className="text-muted text-sm">
+                    Wypełnij pola poniżej - wrócimy z odpowiedzią możliwie
+                    szybko.
+                  </p>
+                </div>
+
+                <div className="grid sm:grid-cols-2 gap-4 mb-4">
+                  <label className="block">
+                    <span className="text-sm font-semibold mb-1 block">
+                      Imię i nazwisko
+                    </span>
+                    <div className={fieldOutlineClass}>
+                      <input
+                        type="text"
+                        name="name"
+                        required
+                        maxLength={120}
+                        autoComplete="name"
+                        className={fieldClass}
+                      />
+                    </div>
+                  </label>
+
+                  <label className="block">
+                    <span className="text-sm font-semibold mb-1 block">
+                      Firma
+                    </span>
+                    <div className={fieldOutlineClass}>
+                      <input
+                        type="text"
+                        name="company"
+                        maxLength={150}
+                        autoComplete="organization"
+                        className={fieldClass}
+                      />
+                    </div>
+                  </label>
+                </div>
+
+                <div className="grid sm:grid-cols-2 gap-4 mb-4">
+                  <label className="block">
+                    <span className="text-sm font-semibold mb-1 block">
+                      E-mail
+                    </span>
+                    <div className={fieldOutlineClass}>
+                      <input
+                        type="email"
+                        name="email"
+                        required
+                        maxLength={150}
+                        autoComplete="email"
+                        className={fieldClass}
+                      />
+                    </div>
+                  </label>
+
+                  <label className="block">
+                    <span className="text-sm font-semibold mb-1 block">
+                      Telefon
+                    </span>
+                    <div className={fieldOutlineClass}>
+                      <input
+                        type="tel"
+                        name="phone"
+                        required
+                        maxLength={30}
+                        autoComplete="tel"
+                        className={fieldClass}
+                      />
+                    </div>
+                  </label>
+                </div>
+
+                <label className="block mb-4">
+                  <span className="text-sm font-semibold mb-1 block">
+                    Wybierz pakiet
+                  </span>
+                  <div className={fieldOutlineClass}>
+                    <select
+                      name="package"
+                      defaultValue={preselectedPackage ?? ""}
+                      required
+                      className={fieldClass}
+                    >
+                      <option value="" disabled>
+                        Wybierz pakiet
+                      </option>
+                      <option value="Pakiet START">Pakiet START</option>
+                      <option value="Pakiet BIZNES">Pakiet BIZNES</option>
+                    </select>
+                  </div>
+                </label>
+
+                <label className="block mb-4">
+                  <span className="text-sm font-semibold mb-1 block">
+                    Opis projektu
+                  </span>
+                  <div className={fieldOutlineClass}>
+                    <textarea
+                      name="message"
+                      rows={6}
+                      required
+                      maxLength={3000}
+                      className={fieldClass}
+                    />
+                  </div>
+                </label>
+
+                <label className="flex items-start gap-2 text-sm text-dark mb-6">
+                  <input
+                    type="checkbox"
+                    name="consent"
+                    required
+                    className="mt-1"
+                  />
+                  <span>
+                    Wyrażam zgodę na kontakt w sprawie zapytania. Zapoznałem/am
+                    się z{" "}
+                    <Link
+                      href="/polityka-prywatnosci"
+                      className="text-primary hover:text-primary-strong"
+                    >
+                      Polityką prywatności
+                    </Link>
+                    .
+                  </span>
+                </label>
+
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="btn w-full disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {status}
-                </p>
-              )}
-            </form>
+                  {loading ? "Wysyłanie..." : "Wyślij zapytanie"}
+                </button>
+
+                {status && (
+                  <p
+                    className={`mt-3 text-sm text-center ${
+                      status.startsWith("✓")
+                        ? "text-primary"
+                        : "text-orange-400"
+                    }`}
+                  >
+                    {status}
+                  </p>
+                )}
+              </form>
+            </div>
           </div>
         </div>
       </div>

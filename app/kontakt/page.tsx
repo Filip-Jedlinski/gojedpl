@@ -11,15 +11,21 @@ export const metadata: Metadata = {
 };
 
 type KontaktPageProps = {
-  searchParams?: {
-    pakiet?: string | string[];
-  };
+  searchParams?:
+    | {
+        pakiet?: string | string[];
+      }
+    | Promise<{
+        pakiet?: string | string[];
+      }>;
 };
 
-export default function KontaktPage({ searchParams }: KontaktPageProps) {
-  const requestedPackage = Array.isArray(searchParams?.pakiet)
-    ? searchParams?.pakiet[0]
-    : searchParams?.pakiet;
+export default async function KontaktPage({ searchParams }: KontaktPageProps) {
+  const resolvedSearchParams = await Promise.resolve(searchParams);
+
+  const requestedPackage = Array.isArray(resolvedSearchParams?.pakiet)
+    ? resolvedSearchParams?.pakiet[0]
+    : resolvedSearchParams?.pakiet;
 
   const preselectedPackage =
     requestedPackage === "Pakiet START" || requestedPackage === "Pakiet BIZNES"

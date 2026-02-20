@@ -51,8 +51,8 @@
 
   .btn {
     @apply inline-flex items-center justify-center px-5 py-3 rounded-xl font-bold transition-all duration-200;
-    @apply bg-gradient-to-b from-[#32f8a0] to-[#1db16d] text-dark hover:shadow-lg hover:-translate-y-0.5;
-    box-shadow: 0 10px 20px rgba(46, 230, 143, 0.22);
+    @apply bg-primary text-dark hover:bg-primary/90 hover:shadow-lg hover:-translate-y-0.5;
+    box-shadow: 0 10px 20px rgba(46, 230, 143, 0.18);
   }
 
   .btn-small {
