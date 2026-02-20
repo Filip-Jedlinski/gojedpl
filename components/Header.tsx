@@ -55,16 +55,36 @@ export default function Header() {
           <button
             type="button"
             className="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-lg border border-line bg-white text-dark"
-            aria-label="OtwĂłrz menu"
+            aria-label={isOpen ? "Zamknij menu" : "Otwórz menu"}
             aria-expanded={isOpen}
+            aria-controls="mobile-menu"
             onClick={() => setIsOpen((prev) => !prev)}
           >
-            <span className="text-2xl leading-none">{isOpen ? "Ă-" : "â°"}</span>
+            <span className="sr-only">
+              {isOpen ? "Zamknij menu" : "Otwórz menu"}
+            </span>
+            <span className="relative block w-5 h-5" aria-hidden="true">
+              <span
+                className={`absolute left-0 top-1/2 h-0.5 w-5 -translate-y-[7px] rounded-full bg-current transition-transform duration-200 ${
+                  isOpen ? "translate-y-0 rotate-45" : ""
+                }`}
+              />
+              <span
+                className={`absolute left-0 top-1/2 h-0.5 w-5 -translate-y-1/2 rounded-full bg-current transition-opacity duration-200 ${
+                  isOpen ? "opacity-0" : "opacity-100"
+                }`}
+              />
+              <span
+                className={`absolute left-0 top-1/2 h-0.5 w-5 translate-y-[6px] rounded-full bg-current transition-transform duration-200 ${
+                  isOpen ? "translate-y-0 -rotate-45" : ""
+                }`}
+              />
+            </span>
           </button>
         </nav>
 
         {isOpen && (
-          <div className="md:hidden pb-4">
+          <div id="mobile-menu" className="md:hidden pb-4">
             <div className="bg-white border border-line rounded-xl p-3 space-y-1">
               <Link
                 href="/oferta"

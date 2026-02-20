@@ -60,7 +60,7 @@ export default function Contact({
       <div className="container">
         <div className={wrapperClass}>
           <div className={layoutClass}>
-            <div className="space-y-6 text-center lg:text-left">
+            <div className="order-2 lg:order-1 space-y-6 text-center lg:text-left">
               <div>
                 <p className="eyebrow">Kontakt</p>
                 <h1
@@ -117,7 +117,7 @@ export default function Contact({
 
             <form
               onSubmit={handleSubmit}
-              className={`bg-white border border-line rounded-2xl p-6 md:p-8 ${fullWidth ? "w-full" : "max-w-2xl mx-auto w-full"}`}
+              className={`order-1 lg:order-2 bg-white border border-line rounded-2xl p-6 md:p-8 ${fullWidth ? "w-full" : "max-w-2xl mx-auto w-full"}`}
             >
               <input
                 type="text"
