@@ -3,8 +3,11 @@ import Portfolio from "@/components/sections/Portfolio";
 import Process from "@/components/sections/Process";
 
 export const metadata: Metadata = {
-  title: "O nas | Poznaj Nas Lepiej! - Gojed",
+  title: "O nas",
   description: "Kim jesteśmy, jak pracujemy i jakie projekty zrealizowaliśmy.",
+  alternates: {
+    canonical: "/o-nas",
+  },
 };
 
 export default function ONasPage() {

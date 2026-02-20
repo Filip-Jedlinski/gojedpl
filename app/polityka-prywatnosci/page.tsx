@@ -3,6 +3,11 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Polityka prywatności | Gojed",
+  description:
+    "Polityka prywatności serwisu gojed.pl - informacje o przetwarzaniu danych i kontakcie.",
+  alternates: {
+    canonical: "/polityka-prywatnosci",
+  },
 };
 
 export default function PrivacyPolicy() {
@@ -50,7 +55,8 @@ export default function PrivacyPolicy() {
         <p className="text-dark mb-6">
           Dane mogą być przekazywane podmiotom technicznym obsługującym
           formularz kontaktowy i infrastrukturę strony, wyłącznie w zakresie
-          niezbędnym do jej działania.
+          niezbędnym do jej działania. Formularz kontaktowy jest obsługiwany
+          przez Formspree (podmiot przetwarzający dane na zlecenie).
         </p>
 
         <h2 className="mt-8 mb-4">5. Czas przechowywania danych</h2>
@@ -69,9 +75,10 @@ export default function PrivacyPolicy() {
 
         <h2 className="mt-8 mb-4">7. Pliki cookies</h2>
         <p className="text-dark mb-6">
-          Strona może wykorzystywać pliki cookies niezbędne do działania,
-          analityczne oraz statystyczne. Szczegółowe ustawienia cookies można
-          kontrolować w przeglądarce.
+          Strona wykorzystuje wyłącznie techniczne pliki cookies niezbędne do
+          działania serwisu. Obecnie nie używamy zewnętrznych narzędzi
+          analitycznych ani reklamowych. Ustawienia cookies możesz kontrolować w
+          swojej przeglądarce.
         </p>
 
         <h2 className="mt-8 mb-4">8. Kontakt</h2>

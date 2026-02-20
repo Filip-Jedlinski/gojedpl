@@ -119,6 +119,19 @@ export default function Contact({
               onSubmit={handleSubmit}
               className={`bg-white border border-line rounded-2xl p-6 md:p-8 ${fullWidth ? "w-full" : "max-w-2xl mx-auto w-full"}`}
             >
+              <input
+                type="text"
+                name="_gotcha"
+                className="hidden"
+                tabIndex={-1}
+                autoComplete="off"
+              />
+              <input
+                type="hidden"
+                name="_subject"
+                value="Nowe zapytanie z formularza gojed.pl"
+              />
+
               <div className="mb-6">
                 <h2 className="text-2xl md:text-3xl mb-2">
                   Formularz kontaktowy
@@ -137,6 +150,8 @@ export default function Contact({
                     type="text"
                     name="name"
                     required
+                    maxLength={120}
+                    autoComplete="name"
                     className="w-full bg-surface-soft border border-line rounded-lg px-4 py-3 text-dark focus:outline-none focus:border-primary/50"
                   />
                 </label>
@@ -148,6 +163,8 @@ export default function Contact({
                   <input
                     type="text"
                     name="company"
+                    maxLength={150}
+                    autoComplete="organization"
                     className="w-full bg-surface-soft border border-line rounded-lg px-4 py-3 text-dark focus:outline-none focus:border-primary/50"
                   />
                 </label>
@@ -162,6 +179,8 @@ export default function Contact({
                     type="email"
                     name="email"
                     required
+                    maxLength={150}
+                    autoComplete="email"
                     className="w-full bg-surface-soft border border-line rounded-lg px-4 py-3 text-dark focus:outline-none focus:border-primary/50"
                   />
                 </label>
@@ -174,6 +193,8 @@ export default function Contact({
                     type="tel"
                     name="phone"
                     required
+                    maxLength={30}
+                    autoComplete="tel"
                     className="w-full bg-surface-soft border border-line rounded-lg px-4 py-3 text-dark focus:outline-none focus:border-primary/50"
                   />
                 </label>
@@ -205,6 +226,7 @@ export default function Contact({
                   name="message"
                   rows={6}
                   required
+                  maxLength={3000}
                   className="w-full bg-surface-soft border border-line rounded-lg px-4 py-3 text-dark focus:outline-none focus:border-primary/50"
                 />
               </label>

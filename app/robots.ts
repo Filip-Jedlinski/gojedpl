@@ -1,4 +1,6 @@
-export default function robots() {
+import type { MetadataRoute } from "next";
+
+export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
@@ -6,6 +8,7 @@ export default function robots() {
         allow: "/",
       },
     ],
+    host: "https://gojed.pl",
     sitemap: "https://gojed.pl/sitemap.xml",
   };
 }

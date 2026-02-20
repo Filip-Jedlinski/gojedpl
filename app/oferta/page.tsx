@@ -2,8 +2,12 @@ import type { Metadata } from "next";
 import Packages from "@/components/sections/Packages";
 
 export const metadata: Metadata = {
-  title: "Oferta | Wybierz Plan dla Swojej Firmy - Gojed",
-  description: "Pakiet START i Pakiet BIZNES. Wybierz plan dla swojej firmy.",
+  title: "Oferta",
+  description:
+    "Pakiet START i Pakiet BIZNES - wybierz stronę internetową dopasowaną do potrzeb Twojej firmy.",
+  alternates: {
+    canonical: "/oferta",
+  },
 };
 
 export default function OfertaPage() {

@@ -12,17 +12,41 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Gojed | Strony internetowe dla lokalnych firm",
+  title: {
+    default: "Gojed | Strony internetowe dla lokalnych firm",
+    template: "%s | Gojed",
+  },
   description:
     "Nowoczesne strony internetowe dla małych firm z Marek, Ząbek, Kobyłki i okolic. Pakiet START, Pakiet BIZNES.",
   keywords:
     "strony internetowe Marki, strona wizytówka Marki, strony internetowe Kobyłka, strony internetowe Ząbki, strony internetowe Zielonka, Gojed",
   metadataBase: new URL("https://gojed.pl"),
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
+    type: "website",
+    locale: "pl_PL",
+    siteName: "Gojed",
     title: "Gojed | Strony internetowe dla lokalnych firm",
     description: "Nowoczesne strony internetowe dla małych firm",
     url: "https://gojed.pl",
-    images: [{ url: "/iconfull.svg" }],
+    images: [
+      {
+        url: "/iconfull.svg",
+        alt: "Gojed - strony internetowe dla lokalnych firm",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Gojed | Strony internetowe dla lokalnych firm",
+    description: "Nowoczesne strony internetowe dla małych firm",
+    images: ["/iconfull.svg"],
   },
 };
 

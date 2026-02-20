@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import Contact from "@/components/sections/Contact";
 
 export const metadata: Metadata = {
-  title: "Kontakt | Skontaktuj Się z Nami - Gojed",
+  title: "Kontakt",
   description:
-    "Skontaktuj się z nami. Telefon: +48 575 121 253, Email: kontakt@gojed.pl",
+    "Skontaktuj się z nami: +48 575 121 253, kontakt@gojed.pl. Odpowiadamy szybko i konkretnie.",
+  alternates: {
+    canonical: "/kontakt",
+  },
 };
 
 type KontaktPageProps = {
