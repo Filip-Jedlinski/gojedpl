@@ -8,6 +8,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/o-nas",
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function ONasPage() {

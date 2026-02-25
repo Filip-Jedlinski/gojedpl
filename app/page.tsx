@@ -38,6 +38,28 @@ export default function Home() {
     url: "https://gojed.pl",
     description:
       "Strony internetowe dla lokalnych firm. Nowoczesna strona, która buduje zaufanie i przyciąga klientów.",
+    hasPart: [
+      {
+        "@type": "WebPage",
+        name: "Oferta",
+        url: "https://gojed.pl/oferta",
+      },
+      {
+        "@type": "WebPage",
+        name: "Kontakt",
+        url: "https://gojed.pl/kontakt",
+      },
+      {
+        "@type": "WebPage",
+        name: "O nas",
+        url: "https://gojed.pl/o-nas",
+      },
+      {
+        "@type": "WebPage",
+        name: "FAQ",
+        url: "https://gojed.pl/faq",
+      },
+    ],
     potentialAction: {
       "@type": "SearchAction",
       target: "https://gojed.pl/?q={search_term_string}",
