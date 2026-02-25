@@ -6,21 +6,6 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   reactStrictMode: true,
-  async redirects() {
-    return [
-      {
-        source: "/:path*",
-        has: [
-          {
-            type: "host",
-            value: "www.gojed.pl",
-          },
-        ],
-        destination: "https://gojed.pl/:path*",
-        permanent: true,
-      },
-    ];
-  },
   async headers() {
     return [
       {
