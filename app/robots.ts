@@ -8,7 +8,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    host: "https://www.gojed.pl",
-    sitemap: "https://www.gojed.pl/sitemap.xml",
+    host: "https://gojed.pl",
+    sitemap: "https://gojed.pl/sitemap.xml",
   };
 }
