@@ -8,6 +8,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/kontakt",
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 type KontaktPageProps = {

@@ -8,6 +8,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/oferta",
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function OfertaPage() {
