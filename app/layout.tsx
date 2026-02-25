@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     "Nowoczesne strony internetowe dla małych firm z Marek, Ząbek, Kobyłki i okolic. Pakiet START, Pakiet BIZNES.",
   keywords:
     "strony internetowe Marki, strona wizytówka Marki, strony internetowe Kobyłka, strony internetowe Ząbki, strony internetowe Zielonka, Gojed",
-  metadataBase: new URL("https://gojed.pl"),
+  metadataBase: new URL("https://www.gojed.pl"),
   alternates: {
     canonical: "/",
   },
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     siteName: "Gojed",
     title: "Gojed | Strony internetowe dla lokalnych firm",
     description: "Nowoczesne strony internetowe dla małych firm",
-    url: "https://gojed.pl",
+    url: "https://www.gojed.pl",
     images: [
       {
         url: "/iconfull.svg",
