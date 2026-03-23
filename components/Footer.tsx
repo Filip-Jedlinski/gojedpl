@@ -38,6 +38,12 @@ export default function Footer() {
             >
               Kontakt
             </Link>
+            <Link
+              href="/faq"
+              className="block text-dark hover:text-primary text-sm mt-1"
+            >
+              FAQ
+            </Link>
           </div>
           <div>
             <p className="font-bold mb-2">Informacje</p>

@@ -67,12 +67,26 @@ export default function Home() {
     },
   };
 
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Gojed",
+    alternateName: "Gojed.pl",
+    url: "https://www.gojed.pl",
+    logo: "https://www.gojed.pl/iconfull.svg",
+  };
+
   return (
     <>
       <Script
         id="schema-website"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
+      <Script
+        id="schema-organization"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
       <Hero />
       <Features />
