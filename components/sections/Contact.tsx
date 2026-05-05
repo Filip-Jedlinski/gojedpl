@@ -104,9 +104,7 @@ export default function Contact({
                 <p className="text-xs font-semibold text-muted mb-1">
                   Obszar działania
                 </p>
-                <p className="text-dark">
-                  Marki, Kobyłka, Zielonka, Radzymin, Tłuszcz, Ząbki
-                </p>
+                <p className="text-dark">Działamy na terenie całej Polski</p>
               </div>
 
               {fullWidth && (

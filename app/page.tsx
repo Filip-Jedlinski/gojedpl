@@ -7,16 +7,16 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "Gojed | My zbudujemy, ty działaj.",
   description:
-    "Strony internetowe dla lokalnych firm. Nowoczesna strona, która buduje zaufanie i przyciąga klientów. Tworzymy szybkie i profesjonalne strony dla mikro i małych firm. Umów darmową konsultację i ciesz się swoją stroną.",
+    "Strony internetowe dla firm z całej Polski. Nowoczesna strona, która buduje zaufanie i przyciąga klientów. Tworzymy szybkie i profesjonalne strony dla mikro i małych firm. Umów darmową konsultację i ciesz się swoją stroną.",
   keywords:
-    "strony internetowe Marki, strony internetowe Ząbki, strony internetowe Kobyłka, tworzenie stron dla firm, Gojed",
+    "strony internetowe Polska, strony internetowe dla firm, tworzenie stron dla firm, Gojed",
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "Gojed | My zbudujemy, ty działaj.",
     description:
-      "Strony internetowe dla lokalnych firm. Nowoczesna strona, która buduje zaufanie i przyciąga klientów.",
+      "Strony internetowe dla firm z całej Polski. Nowoczesna strona, która buduje zaufanie i przyciąga klientów.",
     url: "https://www.gojed.pl",
     siteName: "Gojed",
     locale: "pl_PL",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Gojed | My zbudujemy, ty działaj.",
     description:
-      "Strony internetowe dla lokalnych firm. Nowoczesna strona, która buduje zaufanie i przyciąga klientów.",
+      "Strony internetowe dla firm z całej Polski. Nowoczesna strona, która buduje zaufanie i przyciąga klientów.",
   },
 };
 
@@ -37,7 +37,7 @@ export default function Home() {
     name: "Gojed",
     url: "https://www.gojed.pl",
     description:
-      "Strony internetowe dla lokalnych firm. Nowoczesna strona, która buduje zaufanie i przyciąga klientów.",
+      "Strony internetowe dla firm z całej Polski. Nowoczesna strona, która buduje zaufanie i przyciąga klientów.",
     hasPart: [
       {
         "@type": "WebPage",
