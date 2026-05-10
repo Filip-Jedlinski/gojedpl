@@ -22,8 +22,9 @@ export default function ONasPage() {
           <p className="eyebrow">O nas</p>
           <h1 className="mb-4">Zespół Gojed</h1>
           <p className="text-dark text-lg max-w-2xl mb-12 mx-auto md:mx-0">
-            Filip Jedliński, Arkadiusz Goździcki. Tworzymy nowoczesne strony dla
-            lokalnych firm. Wpieramy lokalne biznesy w rozwoju i cyfryzacji.
+            Filip Jedliński, Arkadiusz Goździcki, Artur Andziak. Tworzymy
+            nowoczesne strony dla lokalnych firm. Wpieramy lokalne biznesy w
+            rozwoju i cyfryzacji.
           </p>
         </div>
       </section>
